@@ -22,7 +22,7 @@ function buildUserReceiptEmail({
   message = "",
 
   // your branding / settings
-  brandName = "Mika",
+  brandName = "Xiang Li",
   replyTime = "within 24 hours on weekdays",
   signatureLine = "With love",
   footerNote = "You're receiving this email because you sent a message via my portfolio contact form.",

@@ -14,7 +14,7 @@ const FOOTER_COPY = {
     github: "GitHub",
     linkedin: "LinkedIn",
     email: "Email",
-    copyright: "© 2026 Mika • Personal profile page • All rights reserved.",
+    copyright: "© 2026 Xiang Li • Personal profile page • All rights reserved.",
   },
   zh: {
     home: "首页",
@@ -25,7 +25,7 @@ const FOOTER_COPY = {
     github: "GitHub",
     linkedin: "LinkedIn",
     email: "邮箱",
-    copyright: "© 2026 Mika • 个人主页 • 保留所有权利。",
+    copyright: "© 2026 Xiang Li • 个人主页 • 保留所有权利。",
   },
 };
 

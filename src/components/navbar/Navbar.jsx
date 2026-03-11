@@ -4,11 +4,12 @@ import { useLocation, useNavigate } from "react-router-dom";
 import './Navbar.css';
 import { scrollToSection } from '../../utils/scrollToSection';
 import { useLanguage } from "../../i18n/language-context";
+import logoImg from "../../assets/logo.jpg";
 
 const NAVBAR_COPY = {
   en: {
-    brandTitle: "Student Profile",
-    brandSubtitle: "Single-page resume showcase",
+    brandTitle: "Ly Studio",
+    brandSubtitle: "Design & Development",
     home: "Home",
     project: "Project",
     feedback: "Feedback",
@@ -17,8 +18,8 @@ const NAVBAR_COPY = {
     switchAria: "Switch the website to Simplified Chinese",
   },
   zh: {
-    brandTitle: "学生档案",
-    brandSubtitle: "单页简历展示",
+    brandTitle: "Ly Studio",
+    brandSubtitle: "设计 & 开发",
     home: "首页",
     project: "项目",
     feedback: "反馈",
@@ -96,7 +97,7 @@ export default function Navbar() {
   return (
     <header className={`topbar ${isScrolled ? 'scrolled' : ''}`}>
       <button className="brand brand-link" type="button" onClick={onCover}>
-        <div className="brand-badge" aria-hidden="true"></div>
+        <img className="brand-badge" src={logoImg} alt="Ly Studio logo" aria-hidden="true" />
         <div>
           {copy.brandTitle}
           <small>{copy.brandSubtitle}</small>

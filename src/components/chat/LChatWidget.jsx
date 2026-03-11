@@ -163,7 +163,6 @@ export default function LChatWidget() {
   const copy = CHAT_COPY[language];
   const initialState = useMemo(() => loadChatState(), []);
   const [isOpen, setIsOpen] = useState(initialState.isOpen);
-  const [suggestionsOpen, setSuggestionsOpen] = useState(initialState.suggestionsOpen);
   const [messages, setMessages] = useState(initialState.messages);
   const [draft, setDraft] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -177,10 +176,9 @@ export default function LChatWidget() {
   useEffect(() => {
     saveChatState({
       isOpen,
-      suggestionsOpen,
       messages,
     });
-  }, [isOpen, suggestionsOpen, messages]);
+  }, [isOpen, messages]);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -373,7 +371,6 @@ export default function LChatWidget() {
     setDraft("");
     setError("");
     setRetryPayloadMessages(null);
-    setSuggestionsOpen(true);
     clearChatState();
   }, []);
 
@@ -403,7 +400,7 @@ export default function LChatWidget() {
 
       <section
         ref={windowRef}
-        className={`lchat-window${isOpen ? " is-open" : ""}`}
+        className={`lchat-window${isOpen ? " is-open" : ""}${error ? " has-error" : ""}`}
         role="dialog"
         aria-label={copy.dialogLabel}
         aria-hidden={!isOpen}
@@ -473,29 +470,19 @@ export default function LChatWidget() {
         </div>
 
         <div className="lchat-composer">
-          <button
-            type="button"
-            className="lchat-suggestions-toggle"
-            onClick={() => setSuggestionsOpen((value) => !value)}
-          >
-            {suggestionsOpen ? copy.hideSuggestions : copy.showSuggestions}
-          </button>
-
-          {suggestionsOpen ? (
-            <div className="lchat-suggestions">
-              {SUGGESTION_CHIPS.map((chip) => (
-                <button
-                  key={`${chip.en}-${chip.zh}`}
-                  type="button"
-                  className="lchat-suggestion-chip"
-                  onClick={() => void sendUserMessage(chip[language])}
-                  disabled={isLoading}
-                >
-                  {chip[language]}
-                </button>
-              ))}
-            </div>
-          ) : null}
+          <div className="lchat-suggestions">
+            {SUGGESTION_CHIPS.map((chip) => (
+              <button
+                key={`${chip.en}-${chip.zh}`}
+                type="button"
+                className="lchat-suggestion-chip"
+                onClick={() => void sendUserMessage(chip[language])}
+                disabled={isLoading}
+              >
+                {chip[language]}
+              </button>
+            ))}
+          </div>
 
           <form className="lchat-form" onSubmit={handleSubmit}>
             <textarea
