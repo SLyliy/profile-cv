@@ -1,0 +1,60 @@
+/* Footer 样式（底部链接、社交按钮、版权区域） */
+
+footer{
+  padding: 1.5vw 3vw 2vw;
+  border-top: 1px solid rgba(120,126,170,.14);
+  background: rgba(243,245,248,.88);
+  text-align:center;
+}
+
+.footer-links{
+  display:flex;
+  justify-content:center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 6px 0 14px;
+}
+
+.footer-links a{
+  font-size: 12px;
+  color: rgba(31,35,64,.70);
+  font-weight: 800;
+  text-decoration:none;
+  padding: 8px 10px;
+  border-radius: 12px;
+  transition: .2s ease;
+}
+
+.footer-links a:hover{ background: rgba(255,255,255,.55); }
+
+.social{
+  display:flex;
+  justify-content:center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.social a{
+  width: 38px; height: 38px;
+  border-radius: 14px;
+  display:grid;
+  place-items:center;
+  background: rgba(255,255,255,.62);
+  border: 1px solid rgba(120,126,170,.14);
+  box-shadow: 0 12px 26px rgba(37,44,92,.10);
+  transition: .2s ease;
+  text-decoration:none;
+}
+
+.social a:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 16px 34px rgba(37,44,92,.12);
+}
+
+.social svg{ width: 18px; height: 18px; opacity: .85; }
+
+.copyright{
+  font-size: 12px;
+  color: rgba(31,35,64,.58);
+  font-weight: 700;
+}

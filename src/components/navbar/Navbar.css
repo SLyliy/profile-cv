@@ -1,0 +1,128 @@
+/* Navbar 样式（顶栏玻璃感 + 品牌 badge + 导航高亮按钮） */
+
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  padding: 1.5vw 3vw;
+  border-bottom: 1px solid rgba(120,126,170,.14);
+  background: rgba(243,245,248,.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.topbar.scrolled{
+  background: rgba(238,242,246,.80);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+
+.brand-link{
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+  text-align: left;
+}
+
+.brand-badge{
+  width: 34px; height: 34px;
+  border-radius: 12px;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255,255,255,.85), rgba(255,255,255,.25) 40%, transparent 60%),
+    linear-gradient(145deg, rgba(107,92,255,.95), rgba(76,195,255,.85));
+  box-shadow: 0 10px 25px rgba(107,92,255,.22);
+  border: 1px solid rgba(255,255,255,.55);
+}
+
+.brand > div{
+  font-weight: 800;
+}
+
+.brand small{
+  display:block;
+  font-weight:700;
+  color: var(--muted);
+  letter-spacing: .1px;
+  margin-top: 2px;
+}
+
+.topbar-actions{
+  display:flex;
+  align-items:center;
+  gap: 14px;
+}
+
+nav a{
+  text-decoration: none;
+  color: rgba(31,35,64,.72);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  transition: .2s ease;
+}
+
+nav a:hover{ 
+  color: #fff;
+  background: linear-gradient(145deg, rgba(130,150,230,.92), rgba(180,200,255,.88));
+  box-shadow: 0 10px 22px rgba(130,150,230,.24);
+  border: 1px solid rgba(255,255,255,.5);
+}
+
+nav a.active{
+  color: rgba(31,35,64,.72);
+  background: transparent;
+}
+
+nav a.active:hover{
+  color: #fff;
+  background: linear-gradient(145deg, rgba(130,150,230,.92), rgba(180,200,255,.88));
+  box-shadow: 0 10px 22px rgba(130,150,230,.24);
+  border: 1px solid rgba(255,255,255,.5);
+}
+
+.lang-toggle{
+  min-width: 56px;
+  height: 42px;
+  border: 1px solid rgba(120,126,170,.18);
+  border-radius: 14px;
+  background: rgba(255,255,255,.72);
+  color: rgba(31,35,64,.76);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: .3px;
+  cursor: pointer;
+  transition: .2s ease;
+  box-shadow: 0 12px 26px rgba(37,44,92,.10);
+}
+
+.lang-toggle:hover{
+  color: #fff;
+  background: linear-gradient(145deg, rgba(130,150,230,.92), rgba(180,200,255,.88));
+  box-shadow: 0 16px 32px rgba(130,150,230,.22);
+  border-color: rgba(255,255,255,.55);
+}
+
+@media (max-width: 520px){
+  nav{ display:none; }
+  .topbar-actions{
+    gap: 10px;
+  }
+}

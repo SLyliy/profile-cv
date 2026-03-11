@@ -1,0 +1,51 @@
+/* 全局基础样式（字体、背景渐变、reset），给整个页面打底 */
+
+*{ box-sizing: border-box; }
+html,body{ height:100%; }
+
+body{
+  margin:0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--text);
+  font-weight: 500;
+  background:
+    radial-gradient(800px 420px at 25% 10%, rgba(107,92,255,.16), transparent 55%),
+    radial-gradient(780px 480px at 78% 18%, rgba(130,120,200,.14), transparent 58%),
+    radial-gradient(900px 520px at 55% 78%, rgba(150,140,220,.12), transparent 60%),
+    var(--bg-a);
+  overflow-x: hidden;
+}
+
+/* 次要文字使用更细的字重 */
+p, .lead, .about-paragraph, .edu-courses, .list, .skill-desc, small {
+  font-weight: 400;
+}
+
+/* 标题保持粗体 */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+/* Scroll reveal */
+[data-reveal]{
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 600ms ease,
+    transform 600ms ease;
+  transition-delay: var(--reveal-delay, 0s);
+  will-change: opacity, transform;
+}
+
+[data-reveal].is-visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce){
+  [data-reveal]{
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+}
