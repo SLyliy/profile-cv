@@ -8,8 +8,11 @@
   position: relative;
   border-bottom: 1px solid rgba(120,126,170,.14);
 
-  /* 关键：背景交给 canvas */
-  background: transparent;
+  /* 立即显示背景图，Canvas 水波效果叠加在上方 */
+  background-image: url("../../assets/Cover_4.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   overflow: hidden;
 }
 
