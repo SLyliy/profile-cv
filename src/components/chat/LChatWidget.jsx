@@ -395,7 +395,6 @@ export default function LChatWidget() {
         aria-label={isOpen ? copy.closeChat : copy.openChat}
       >
         <ChatIcon />
-        <span className="lchat-bubble-label">L</span>
       </button>
 
       <section

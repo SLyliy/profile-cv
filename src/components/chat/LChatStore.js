@@ -42,7 +42,7 @@ export function loadChatState() {
       : [];
 
     return {
-      isOpen: Boolean(parsed?.isOpen),
+      isOpen: false,
       suggestionsOpen:
         typeof parsed?.suggestionsOpen === "boolean" ? parsed.suggestionsOpen : true,
       messages,
