@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useScrollReveal } from "../../utils/useScrollReveal";
 import { supabase } from "../../lib/supabaseClient";
 import "./Feedback.css";
-import snowBg from "../../assets/snow.jpg";
+import snowBg from "../../assets/snow.JPG";
 import cover2Img from "../../assets/cover2.jpg";
 import { useLanguage } from "../../i18n/language-context";
 

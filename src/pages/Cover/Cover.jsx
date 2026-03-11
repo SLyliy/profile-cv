@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useScrollReveal } from "../../utils/useScrollReveal";
-import coverImg from "../../assets/Cover_4.JPG";
+import coverImg from "../../assets/Cover_4.jpg";
 import CoverRipple from "./CoverRipple";
 import "./Cover.css";
 import { useLanguage } from "../../i18n/language-context";
