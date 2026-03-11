@@ -119,19 +119,19 @@ const PROJECT_COPY = {
         repoUrl: "https://github.com/SLyliy/Financial-Investment-Assistant.git",
       },
       {
-        title: "Interview System",
+        title: "Interview Study System",
         description:
           "Web-based interview question bank and practice platform with teacher-admin and student interfaces. Supports tag management, difficulty categorisation, comment threads, favourites, and scoring stats.",
-        stack: "React, Vite, Express, JWT, PostgreSQL",
+        stack: "React, Vite, Node.js, Express.js, PostgreSQL, JWT , CORS , nodemon, Docker",
         liveUrl: "",
         repoUrl: "https://github.com/SLyliy/rbtree-interview-system.git",
       },
       {
-        title: "RentalRights",
+        title: "RentRights UI Prototype",
         description:
           "UI design prototype for a rental rights support platform, with legal guidance, AI chat help, knowledge resources, human support, and case management tools.",
         stack: "Figma, Wireframing, Prototyping, UI/UX Design, User Flow Design",
-        liveUrl: "https://www.figma.com/design/vwckIdQZ48Ii7247rRvVru/rentalrights?node-id=6-2&p=f&t=TOQXKrdPjflp6Tnb-0",
+        liveUrl: "https://www.figma.com/design/vwckIdQZ48Ii7247rRvVru/RentRights UI Prototype?node-id=6-2&p=f&t=TOQXKrdPjflp6Tnb-0",
         repoUrl: "",
       },
     ],
@@ -153,7 +153,7 @@ const PROJECT_COPY = {
         repoUrl: "https://github.com/SLyliy/Financial-Investment-Assistant.git",
       },
       {
-        title: "Interview System",
+        title: "Interview Study System",
         description:
           "Web 面试题库与练习平台，区分教师管理端与学生刷题端，支持题目与标签体系维护、难度分类、评论讨论区、收藏夹与错题本、刷题进度与得分统计。",
         stack: "React, Vite, Express, JWT, PostgreSQL",
@@ -161,11 +161,11 @@ const PROJECT_COPY = {
         repoUrl: "https://github.com/SLyliy/rbtree-interview-system.git",
       },
       {
-        title: "RentalRights",
+        title: "RentRights UI Prototype",
         description:
           "租房权益支持平台的 UI 设计原型，涵盖法律指引、AI 智能问答、知识资源库、人工支持及案件管理工具。",
         stack: "Figma, Wireframing, Prototyping, UI/UX Design, User Flow Design",
-        liveUrl: "https://www.figma.com/design/vwckIdQZ48Ii7247rRvVru/rentalrights?node-id=6-2&p=f&t=TOQXKrdPjflp6Tnb-0",
+        liveUrl: "https://www.figma.com/design/vwckIdQZ48Ii7247rRvVru/RentRights UI Prototype?node-id=6-2&p=f&t=TOQXKrdPjflp6Tnb-0",
         repoUrl: "",
       },
     ],
